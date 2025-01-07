@@ -13,8 +13,8 @@ const Footer = () => {
     <div className="dark:bg-[#1a1a1a]">
       <hr className="border-1 dark:border-white border-black" />
 
-      <div className="p-4 flex justify-between items-center">
-        <div className="flex items-center w-1/3 gap-2">
+      <div className="p-4 flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex items-center space-x-4 sm:w-1/3 w-full">
           <FaHandsHelping />
 
           <p className="text-sm font-extralight font-poppins">

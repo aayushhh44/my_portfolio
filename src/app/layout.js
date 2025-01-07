@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="../aayush.png" />
+        <link  href="../aayush.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1a1a1a" />
       </head>

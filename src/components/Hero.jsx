@@ -13,13 +13,13 @@ import { FaRss } from "react-icons/fa6";
 const Hero = () => {
   return (
     <div className="p-8 dark:bg-[#1a1a1a] ">
-      <div className="w-2/3">
-      <div className="flex items-center space-x-2">
-        <p className=" font-poppins text-4xl font-bold">
+      <div className="w-full sm:w-2/3">
+      <div className="flex items-center my-4 space-x-2">
+        <p className=" font-poppins text-xl sm:text-4xl  font-bold">
           Hi! <span className="motion-preset-shake">👋🏻</span> Its me Aayush
           Poudel
         </p>
-        <FaRss className="cursor-pointer" size={20} />
+        <FaRss className="cursor-pointer text-[#d62727]" size={20} />
         </div>
         <p>A passionate frontend developer with a strong fundamentals of
           blockchain and web3. I believe technology can be used to change the
