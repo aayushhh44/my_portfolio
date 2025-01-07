@@ -4,14 +4,16 @@ import Link from "next/link";
 import { FaRegMoon } from "react-icons/fa";
 import { CiSun } from "react-icons/ci";
 import Hamburger from "./Hamburger";
-
-
-// export const runtime = "edge";
-
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState("light");
+  const pathname = usePathname();
+
+  const isActive = (path) => {
+    return pathname === path;
+  };
 
   useEffect(() => {
     if (theme === "dark") {
@@ -40,27 +42,48 @@ const Navbar = () => {
   return (
     <div>
       <div
-        className={` p-6 sm:p-8 flex justify-between ${
+        className={`p-6 sm:p-8 flex justify-between ${
           theme === "dark"
             ? "bg-[#1a1a1a] text-white"
             : "bg-white text-[#1a1a1a]"
         }`}
       >
         <div className="font-source-code hidden sm:flex gap-x-6">
-          <Link href="/" className="text-sm hover:text-[#d62727]">
+          <Link
+            href="/"
+            className={`hover:text-[#d62727] ${
+              isActive("/") ? "font-bold text-[#d62727]" : ""
+            }`}
+          >
             HOME
           </Link>
-          <Link href="./blogs" className="text-sm hover:text-[#d62727]">
+          <Link
+            href="/blogs"
+            className={`hover:text-[#d62727] ${
+              isActive("/blogs") ? "font-bold text-[#d62727]" : ""
+            }`}
+          >
             BLOGS
           </Link>
-          <Link href="/gallery" className="text-sm hover:text-[#d62727]">
+          <Link
+            href="/gallery"
+            className={`hover:text-[#d62727] ${
+              isActive("/gallery") ? "font-bold text-[#d62727]" : ""
+            }`}
+          >
             GALLERY
           </Link>
-          <Link href="/contacts" className="text-sm hover:text-[#d62727]">
+          <Link
+            href="/contacts"
+            className={`hover:text-[#d62727] ${
+              isActive("/contacts") ? "font-bold text-[#d62727]" : ""
+            }`}
+          >
             ABOUT & CONTACTS
           </Link>
         </div>
 
+        {/* Rest of the component remains the same */}
         {theme === "dark" ? (
           <CiSun
             className="cursor-pointer hidden sm:block"

@@ -22,7 +22,7 @@ const Contacts = () => {
         <div className="flex flex-col w-full sm:w-1/2">
           <p className="font-poppins font-bold">
             My tech stacks are:
-            <span className="text-[#d62727] font-bold font-poppins">
+            <span className="text-[#d62727]  font-bold font-poppins">
               JavaScript, TypeScript, React.js, Node.js, MongoDB, PostgreSQL,
               MySQL, Docker, Python, Solidity, Rust, Express.js, Tailwind CSS,
               Redux, Next.js, Git, Web3.js, Firebase.
@@ -35,10 +35,10 @@ const Contacts = () => {
           <hr className=" border-black border-1 dark:border-white" />
         </div>
 
-        <div className=" w-full sm:w-1/2">
+        <div className=" w-full motion-preset-flomoji-🚀 sm:w-1/2">
           <img
             loading="eager"
-            className="rounded-full w-80 h-80 object-cover"
+            className="rounded-full  w-80 h-80 object-cover motion-preset-compress "
             src="/my_image.jpg"
             alt=""
           />

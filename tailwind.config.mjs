@@ -18,7 +18,7 @@ const tailwindConfig = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-motion')],
 };
 
 export default tailwindConfig;
