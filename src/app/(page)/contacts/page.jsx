@@ -22,7 +22,7 @@ const Contacts = () => {
         <div className="flex flex-col w-full sm:w-1/2">
           <p className="font-poppins font-bold">
             My tech stacks are:
-            <span className="text-[#d62727]  font-bold font-poppins">
+            <span className="text-[#d62727] motion-preset-shrink   font-bold font-poppins">
               JavaScript, TypeScript, React.js, Node.js, MongoDB, PostgreSQL,
               MySQL, Docker, Python, Solidity, Rust, Express.js, Tailwind CSS,
               Redux, Next.js, Git, Web3.js, Firebase.
@@ -46,7 +46,7 @@ const Contacts = () => {
       </div>
 
       <div className="w-full sm:w-1/2">
-        <p className="font-poppins text-justify">
+        <p className="font-poppins text-justify ">
           Before starting with computer science and programming,
           <span className="text-[#d62727] font-bold">
             I studied taking biology as my major till grade 12th
