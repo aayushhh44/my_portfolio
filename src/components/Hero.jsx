@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <FaRss className="cursor-pointer text-[#d62727]" size={20} />
         </div>
-        <p>A passionate frontend developer with a strong fundamentals of
+        <p>A full Stack developer with a knowledge of
           blockchain and web3. I believe technology can be used to change the
           world. I sometimes write my knowledge and past experience here. </p>
 
