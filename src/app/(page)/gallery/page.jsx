@@ -1,14 +1,7 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import Image1 from "../../../assets/IMG_3638.jpg";
-import Image2 from '../../../assets/IMG_3721.png'
-import Image3 from '../../../assets/IMG_3722.jpg'
-import Image4 from '../../../assets/IMG_3723.jpg'
-import Image5 from '../../../assets/IMG_3724.jpg'
-import Image6 from '../../../assets/IMG_3725.jpg'
-import Image7 from '../../../assets/IMG_3726.jpg'
-import Image8 from '../../../assets/IMG_3727.jpg'
+
 
 
 // export const runtime = "edge";
@@ -19,47 +12,63 @@ const Gallery = () => {
     <div className="dark:bg-[#1a1a1a] p-2 sm:p-4">
       <div className="columns-2 sm:columns-3 md:columns-4  gap-2">
         <Image
-          src={Image1}
+          src="./assets/IMG_3638.jpg"
           alt=""
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade loading- cursor-pointer mb-2"
         />
         <Image
-          src={Image2}
+          src="./assets/IMG_3721.png"
           alt=""
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
         <Image
-          src={Image3}
+          src="./assets/IMG_3722.jpg"
           alt=""
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
         <Image
-          src={Image4}
+          src="./assets/IMG_3723.jpg"
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
         <Image
-          src={Image5}
+          src="./assets/IMG_3723.jpg"
           alt=""
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
         <Image
-          src={Image6}
+          src="./assets/IMG_3725.jpg"
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
          <Image
-          src={Image7}
+          src='./assets/IMG_3726.jpg'
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
          <Image
-          src={Image8}
+          src='./assets/IMG_3727.jpg'
           loading="eager"
+          width={500}
+          height={500}
           className="w-full motion-preset-fade  cursor-pointer mb-2"
         />
 
