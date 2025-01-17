@@ -10,8 +10,8 @@ import "react-quill-new/dist/quill.snow.css";
 import dynamic from "next/dynamic";
 import api from "@/api";
 import { createBlogAPI } from "@/api/backed-routes";
-import DOMPurify from "dompurify";
 import { useRouter } from "next/navigation";
+import DOMPurify from 'isomorphic-dompurify';
 
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
 
@@ -27,7 +27,9 @@ const BlogEditor = () => {
   const [isAuth, setisAuth] = useState(false);
   const reactQuillRef = useRef(null);
 
-  const sanitizedHTML = DOMPurify.sanitize(value);
+  const sanitizedHTML = typeof window !== 'undefined' 
+  ? DOMPurify.sanitize(value)
+  : value;
 
   const uploadToCloudinary = async (files) => {
     const uploadPromises = Array.from(files).map(async (file) => {
@@ -203,8 +205,7 @@ const BlogEditor = () => {
   //   if (isAuth) {
   //     router.push("/dashboard");
   //   }
-  // }, [isAuth]);  
-  
+  // }, [isAuth]);
 
   if (isAuth) {
     return (
