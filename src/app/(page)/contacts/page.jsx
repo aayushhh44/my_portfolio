@@ -12,14 +12,16 @@ const Contacts = () => {
         <p className="font-poppins font-bold text-3xl">About</p>
       </div>
 
-      <div className="font-poppins mt-20">
+      <div className="font-poppins mt-20 flex flex-col space-y-4 mb-4">
         <p className="text-3xl">I am Aayush Poudel</p>
+        <div>
         <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
           Half my time is spent building stuff,
         </p>
         <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
           the other half Googling how to build stuff.
         </p>
+        </div>
       </div>
 
       <div className="flex flex-col-reverse sm:flex-row font-poppins items-center justify-center ">
@@ -39,10 +41,10 @@ const Contacts = () => {
           <hr className=" border-black border-1 dark:border-white" />
         </div>
 
-        <div className=" w-full motion-preset-flomoji-🚀 sm:w-1/2">
+        <div className=" w-full motion-preset-flomoji-🚀 sm:w-1/2 ">
           <img
             loading="eager"
-            className="rounded-full  w-80 h-80 object-cover motion-preset-compress "
+            className="rounded-full mb-6 sm:mb-0  w-80 h-80 object-cover motion-preset-compress "
             src="/my_image.jpg"
             alt=""
           />
@@ -129,14 +131,18 @@ const Contacts = () => {
           Whether it’s exploring new technologies or discovering new places, I’m
           always curious. I love to travel. To learn new things.
         </p>
-        <a target="_blank" className="text-[#d62727] font-poppins font-bold" href="https://www.linkedin.com/in/aayush-tech-poudel/">
+        <a
+          target="_blank"
+          className="text-[#d62727] font-poppins font-bold"
+          href="https://www.linkedin.com/in/aayush-tech-poudel/"
+        >
           View my Linkedin Profile
         </a>
         .
         <br />
         <div className="mt-12">
-          <a className="text-[#d62727] font-poppins font-bold " href="">
-            📄Download my Resume
+          <a target="_blank" className="text-[#d62727] font-poppins font-bold " href="https://github.com/aayushhh44/my_docs/blob/main/mycv.pdf">
+            📄View my CV
           </a>
           .
           <p className="font-light  font-poppins">
@@ -149,7 +155,11 @@ const Contacts = () => {
         <p>
           Reach out, and let's see where the conversation takes us. Feel free to
         </p>
-        <a className="text-[#d62727] font-bold" target="_blank" href="https://x.com/aaymongush">
+        <a
+          className="text-[#d62727] font-bold"
+          target="_blank"
+          href="https://x.com/aaymongush"
+        >
           connect with me on X
         </a>
         <span>and</span>
