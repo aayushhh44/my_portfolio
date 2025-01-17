@@ -28,7 +28,6 @@ const Hero = () => {
       try {
         const resp = await api.get(getAllBlogsAPI);
         setBlogs(resp?.data?.blogs);
-        console.log(resp?.data);
         return resp.data;
       } catch (err) {
         setError(err?.response?.data?.err || "An unexpected error occurred.");

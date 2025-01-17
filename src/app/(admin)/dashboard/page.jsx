@@ -25,7 +25,6 @@ const BlogEditor = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [tags, setTags] = useState("");
   const [isAuth, setisAuth] = useState(false);
-  console.log("tags bros", tags);
   const reactQuillRef = useRef(null);
 
   const sanitizedHTML = DOMPurify.sanitize(value);
@@ -75,8 +74,6 @@ const BlogEditor = () => {
   }
 
   const tagsArray = tags.split(",").map((tag) => tag.trim());
-
-  console.log("tags array", tagsArray);
 
   const imageHandler = useCallback(() => {
     const input = document.createElement("input");

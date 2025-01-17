@@ -7,7 +7,6 @@ import React, { useEffect, useState } from "react";
 
 const page = () => {
   const [tags, setTags] = useState();
-  console.log("ur tags", tags);
   const [isloading, setIsLoading] = useState(true);
 
   const router = useRouter();
@@ -16,8 +15,6 @@ const page = () => {
     const getTags = async () => {
       try {
         const resp = await api.get(getAllTagsAPI);
-
-        console.log(resp.data?.tags);
         setTags(resp.data?.tags);
         return resp.data;
       } catch (error) {

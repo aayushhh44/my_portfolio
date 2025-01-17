@@ -10,7 +10,6 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 const page = () => {
   const { param } = useParams();
   const[isLoading, setIsLoading] = useState(true);
-  console.log("slugs", param);
   const [blogs, setBlogs] = useState();
 
   useEffect(() => {

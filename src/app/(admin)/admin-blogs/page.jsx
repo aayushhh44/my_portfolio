@@ -13,7 +13,7 @@ const Page = () => {
   const [showModal, setShowModal] = useState(false);
   const [accessToken, setAccessToken] = useState();
   const [blogId, setBlogId] = useState();
-  console.log('access tokken', accessToken)
+
 
   useEffect(() => {
     const token = localStorage.getItem("AccessToken");

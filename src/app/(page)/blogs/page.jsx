@@ -25,7 +25,6 @@ const Blogs = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [isloading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  console.log("blogs", blogs);
 
   useEffect(() => {
     const getAllBlogs = async () => {
@@ -34,7 +33,6 @@ const Blogs = () => {
           `${getAllBlogsAPI}?page=${currentPage}&limit=6`
         );
         setBlogs(resp.data);
-        console.log(resp?.data);
         setTotalPages(resp.data.totalPages);
         return resp.data;
       } catch (err) {

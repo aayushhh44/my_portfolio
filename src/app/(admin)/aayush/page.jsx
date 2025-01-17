@@ -12,13 +12,12 @@ const page = () => {
   const [password, setPassword] = useState();
   const router = useRouter();
   const { toast } = useToast();
-  // console.log(username)
 
   const Login = async (e) => {
     e.preventDefault();
     try {
       const resp = await api.post(loginAPI, { username, password });
-      console.log(resp);
+
       if (resp.status === 200) {
         localStorage.setItem("AccessToken", resp.data.accessToken);
         toast({
@@ -89,12 +88,9 @@ const page = () => {
                       />
                     </div>
                     <div className="ml-3 text-sm">
-                      {/* <label for="remember" className="text-gray-500 ">
-                        Remember me
-                      </label> */}
+             
                     </div>
                   </div>
-                  {/* <a href="#" className="text-sm font-medium text-primary-600 hover:underline ">Forgot password?</a> */}
                 </div>
                 <button
                   onClick={Login}
@@ -102,9 +98,7 @@ const page = () => {
                 >
                   Sign in
                 </button>
-                {/* <p className="text-sm font-light ">
-                  Don’t have an account yet?
-                </p> */}
+              
               </form>
             </div>
           </div>
