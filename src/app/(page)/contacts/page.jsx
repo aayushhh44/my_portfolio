@@ -1,9 +1,8 @@
-"use client"
-import React from "react";
-
+"use client";
+import Loading from "@/components/Loading";
+import React, { useEffect, useState } from "react";
 
 // export const runtime = "edge";
-
 
 const Contacts = () => {
   return (
@@ -15,10 +14,15 @@ const Contacts = () => {
 
       <div className="font-poppins mt-20">
         <p className="text-3xl">I am Aayush Poudel</p>
-        <p>I love creating functional websites.</p>
+        <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
+          Half my time is spent building stuff,
+        </p>
+        <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
+          the other half Googling how to build stuff.
+        </p>
       </div>
 
-      <div className="flex flex-col-reverse sm:flex-row font-poppins items-center justify-center gap-6">
+      <div className="flex flex-col-reverse sm:flex-row font-poppins items-center justify-center ">
         <div className="flex flex-col w-full sm:w-1/2">
           <p className="font-poppins font-bold">
             My tech stacks are:
@@ -125,7 +129,7 @@ const Contacts = () => {
           Whether it’s exploring new technologies or discovering new places, I’m
           always curious. I love to travel. To learn new things.
         </p>
-        <a className="text-[#d62727] font-poppins font-bold" href="">
+        <a target="_blank" className="text-[#d62727] font-poppins font-bold" href="https://www.linkedin.com/in/aayush-tech-poudel/">
           View my Linkedin Profile
         </a>
         .
@@ -145,7 +149,7 @@ const Contacts = () => {
         <p>
           Reach out, and let's see where the conversation takes us. Feel free to
         </p>
-        <a className="text-[#d62727] font-bold" href="">
+        <a className="text-[#d62727] font-bold" target="_blank" href="https://x.com/aaymongush">
           connect with me on X
         </a>
         <span>and</span>

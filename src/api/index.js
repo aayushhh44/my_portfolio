@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseURL = 'http://localhost:3090/api/';
+export const baseURL = 'https://portfolio-backend-ujzz.onrender.com/api';
 
 export default axios.create({
     baseURL:baseURL

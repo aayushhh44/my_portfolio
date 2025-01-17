@@ -1,33 +1,36 @@
 "use client";
 import api from "@/api";
-import { loginAPI } from "@/api/login";
-import { useRouter } from "next/navigation"; 
+import { loginAPI } from "@/api/backed-routes";
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-
 // export const runtime = "edge";
-
 
 const page = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const router = useRouter();
+  const { toast } = useToast();
   // console.log(username)
 
   const Login = async (e) => {
     e.preventDefault();
-    try{
-      const resp = await api.post(loginAPI,{username, password});
-      console.log(resp)
-      if(resp.status === 200){
-        router.push('/dashboard')
+    try {
+      const resp = await api.post(loginAPI, { username, password });
+      console.log(resp);
+      if (resp.status === 200) {
+        localStorage.setItem("AccessToken", resp.data.accessToken);
+        toast({
+          title: "You're authenticated",
+          description: "Redirecting to dashboard",
+        })
+        router.push("/dashboard");
       }
-    }catch(err){
-      console.log(err)
+    } catch (err) {
+      console.log(err);
     }
-
-
-  };
+  };  
   return (
     <div>
       <section className=" text-black font-poppins dark:bg-[#1a1a1a] dark:text-white">
@@ -86,23 +89,22 @@ const page = () => {
                       />
                     </div>
                     <div className="ml-3 text-sm">
-                      <label for="remember" className="text-gray-500 ">
+                      {/* <label for="remember" className="text-gray-500 ">
                         Remember me
-                      </label>
+                      </label> */}
                     </div>
                   </div>
                   {/* <a href="#" className="text-sm font-medium text-primary-600 hover:underline ">Forgot password?</a> */}
                 </div>
                 <button
-                onClick={Login}
-             
+                  onClick={Login}
                   className="w-full bg-[#d62727] text-white hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 >
                   Sign in
                 </button>
-                <p className="text-sm font-light ">
+                {/* <p className="text-sm font-light ">
                   Don’t have an account yet?
-                </p>
+                </p> */}
               </form>
             </div>
           </div>

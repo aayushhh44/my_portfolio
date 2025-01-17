@@ -11,19 +11,19 @@ const Hamburger = ({ isOpen, setIsOpen }) => {
         aria-label="Toggle Menu"
       >
         <span
-          className={`block h-1 w-full bg-black rounded transform transition-transform duration-300 ${
+          className={`block h-1 w-full bg-black dark:bg-white rounded transform transition-transform duration-300 ${
             isOpen ? "rotate-45 translate-y-3" : ""
           }`}
         ></span>
 
         <span
-          className={`block h-1 w-4 bg-black rounded transition-opacity duration-300 ${
+          className={`block h-1 w-4 bg-black dark:bg-white rounded transition-opacity duration-300 ${
             isOpen ? "opacity-0" : ""
           }`}
         ></span>
 
         <span
-          className={`block h-1 w-full bg-black rounded transform transition-transform duration-300 ${
+          className={`block h-1 w-full bg-black dark:bg-white rounded transform transition-transform duration-300 ${
             isOpen ? "-rotate-45 -translate-y-3" : ""
           }`}
         ></span>

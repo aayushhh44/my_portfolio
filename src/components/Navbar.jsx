@@ -4,11 +4,17 @@ import Link from "next/link";
 import { FaRegMoon } from "react-icons/fa";
 import { CiSun } from "react-icons/ci";
 import Hamburger from "./Hamburger";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") || "light";
+    }
+    return "light";
+  });
+
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
   const pathname = usePathname();
 
   const isActive = (path) => {
@@ -16,11 +22,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -36,8 +38,9 @@ const Navbar = () => {
   }, [isOpen]);
 
   const toggleDarkMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
+
 
   return (
     <div>
@@ -66,6 +69,14 @@ const Navbar = () => {
             BLOGS
           </Link>
           <Link
+            href="/tags"
+            className={`hover:text-[#d62727] ${
+              isActive("/tags") ? "font-bold text-[#d62727]" : ""
+            }`}
+          >
+            TAGS
+          </Link>
+          <Link
             href="/gallery"
             className={`hover:text-[#d62727] ${
               isActive("/gallery") ? "font-bold text-[#d62727]" : ""
@@ -86,6 +97,7 @@ const Navbar = () => {
         {/* Rest of the component remains the same */}
         {theme === "dark" ? (
           <CiSun
+            aria-label="Switch to light theme"
             className="cursor-pointer hidden sm:block"
             size={20}
             onClick={toggleDarkMode}
@@ -134,6 +146,14 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
         >
           BLOGS
+        </Link>
+
+        <Link
+          href="/tags"
+          className="text-2xl text-center hover:text-[#d62727]"
+          onClick={() => setIsOpen(false)}
+        >
+         TAGS
         </Link>
         <Link
           href="/gallery"

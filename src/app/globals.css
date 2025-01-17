@@ -5,5 +5,41 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+
+@layer components {
+  .blog-content {
+    @apply space-y-4;  
+    
+    /* Headings */
+    & h1 {
+      @apply text-2xl font-bold;
+    }
+
+    & img{
+      border: 2px solid #d62727;
+      
+    }
+
+    & h2{
+      @apply text-xl font-bold
+    }
+    
+    & h3 {
+      @apply text-xl font-bold;
+    }
+    
+
+    & blockquote {
+      @apply border-l-4 border-red-600 pl-2 italic;
+    }
+    
+   
+    & .ql-code-block-container {
+      @apply bg-gray-100 p-4 rounded-md font-mono;
+    }
   }
+}
+
