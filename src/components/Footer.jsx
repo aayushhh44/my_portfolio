@@ -31,7 +31,7 @@ const Footer = () => {
 
         <div className="flex items-center gap-1 cursor-pointer">
           <FiGithub />
-          <a className="text-[#d62727] text-sm font-poppins" href="">
+          <a className="text-[#d62727] text-sm font-poppins" href="https://github.com/aayushhh44">
             git me
           </a>
           .

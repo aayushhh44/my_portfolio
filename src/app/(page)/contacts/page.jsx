@@ -15,12 +15,12 @@ const Contacts = () => {
       <div className="font-poppins mt-20 flex flex-col space-y-4 mb-4">
         <p className="text-3xl">I am Aayush Poudel</p>
         <div>
-        <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
-          Half my time is spent building stuff,
-        </p>
-        <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
-          the other half Googling how to build stuff.
-        </p>
+          <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
+            Half my time is spent building stuff,
+          </p>
+          <p className="font-poppins italic font-semibold text-sm text-[#d62727]">
+            the other half Googling how to build stuff.
+          </p>
         </div>
       </div>
 
@@ -41,7 +41,7 @@ const Contacts = () => {
           <hr className=" border-black border-1 dark:border-white" />
         </div>
 
-        <div className=" w-full motion-preset-flomoji-🚀 sm:w-1/2 ">
+        <div className="w-full motion-preset-flomoji-🚀 sm:w-1/2 ">
           <img
             loading="eager"
             className="rounded-full mb-6 sm:mb-0  w-80 h-80 object-cover motion-preset-compress "
@@ -141,7 +141,11 @@ const Contacts = () => {
         .
         <br />
         <div className="mt-12">
-          <a target="_blank" className="text-[#d62727] font-poppins font-bold " href="https://github.com/aayushhh44/my_docs/blob/main/mycv.pdf">
+          <a
+            target="_blank"
+            className="text-[#d62727] font-poppins font-bold "
+            href="https://github.com/aayushhh44/my_docs/blob/main/mycv.pdf"
+          >
             📄View my CV
           </a>
           .

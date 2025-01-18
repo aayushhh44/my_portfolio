@@ -23,13 +23,13 @@ const page = () => {
         toast({
           title: "You're authenticated",
           description: "Redirecting to dashboard",
-        })
+        });
         router.push("/dashboard");
       }
     } catch (err) {
       console.log(err);
     }
-  };  
+  };
   return (
     <div>
       <section className=" text-black font-poppins dark:bg-[#1a1a1a] dark:text-white">
@@ -78,18 +78,7 @@ const page = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-start">
-                    <div className="flex items-center h-5">
-                      <input
-                        id="remember"
-                        aria-describedby="remember"
-                        type="checkbox"
-                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
-                        required=""
-                      />
-                    </div>
-                    <div className="ml-3 text-sm">
-             
-                    </div>
+                    <div className="ml-3 text-sm"></div>
                   </div>
                 </div>
                 <button
@@ -98,7 +87,6 @@ const page = () => {
                 >
                   Sign in
                 </button>
-              
               </form>
             </div>
           </div>
