@@ -84,7 +84,7 @@ const BlogPage = () => {
       >
         back
       </button>
-      <div className="p-4 mt-6 flex font-poppins justify-around">
+      <div className="p-8 mt-6 flex font-poppins justify-around">
         <div className="w-full sm:w-1/2">
           <p className="text-[#d62727] font-bold text-xl motion-preset-fade  font-poppins hover:underline underline-offset-2">
             {blogContent?.blog?.title}
